@@ -1,0 +1,9 @@
+<div>
+	<h1>
+		<%=link_to "User Listing", users_path%> |
+    	<%if @user%><%=link_to "Users TaskLists", task_lists_path %> |
+    	<%=link_to "Users Tasks", :controller=>"users",:action=>"tasks" %> |<%end%>
+		<%=link_to 'Logout',{:controller=>'users',:action=>'logout'} %> |
+		<%=link_to 'Change Password',{:controller=>'users',:action=>'change_password'} %>
+	</h1>
+</div>

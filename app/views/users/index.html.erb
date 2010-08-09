@@ -1,0 +1,53 @@
+<h1>Listing users</h1>
+
+
+<table class="list" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <thead>
+        <tr class="titlename">
+            <th>
+                S/N 
+            </th>
+            <th>
+                Title 
+            </th>
+            <th>
+             Full Name
+            </th>    
+            <th>
+                Email
+            </th>
+            <th>
+                User Type
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody id='users_list'>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.title %></td>
+    <td><%=link_to user.full_name,edit_user_path(user) %></td>
+
+    <td><%=h user.email %></td>
+    <td><%=h user.user_type %></td>
+    <td><%=h user.phone_number %></td>
+   	<td><%=link_to "Show All TaskLists", task_lists_path if user.id == session[:user_id]%> </td>    
+    <td><%= link_to ('Show', user) if user.id == session[:user_id]%></td>
+    <td><%= link_to ('Edit', edit_user_path(user)) if user.id == session[:user_id]%></td>
+  </tr>
+<% end %>
+    </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New users', new_user_path %>

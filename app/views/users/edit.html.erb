@@ -1,0 +1,160 @@
+<h1>Editing users</h1>
+<table>
+<% form_for(@user) do |f| %>
+
+<tr>
+<td>
+  <%= f.error_messages %>
+</td>
+</tr>
+<tr>
+    <td>
+        <label for="title">
+           Title :
+			
+        </label>
+    </td>
+    <td>
+       <%= f.select('title',["Mr","Mrs","Miss","Ms","Dr"],{:prompt => 'Select Title'},:class=>'textBoxWidth') %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="first_name">
+           First Name :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'first_name',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="first_name">
+           Last Name :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'last_name',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="email">
+           Email :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'email',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="password">
+           Password :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.password_field  'password',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="password">
+           Password Confirmation:
+			
+        </label>
+    </td>
+    <td>
+        <%= f.password_field  'password_confirmation',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <label for="phone_number">
+           Phone Number :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'phone_number',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="current_address">
+          Current Address :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_area  'current_address',:class=>'textBoxWidth',:rows=>7 %>
+		
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="resident_address">
+           Permanent Address :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_area  'resident_address',:class=>'textBoxWidth',:rows=>7 %>
+		
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <label for="city">
+           City :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'city',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <label for="postal_code">
+           Postal code :
+			
+        </label>
+    </td>
+    <td>
+        <%= f.text_field  'postal_code',:class=>'textBoxWidth' %>
+		
+    </td>
+</tr>
+<tr>
+
+
+<tr>
+<td>
+    <%= f.submit 'Update' %>
+</td>
+</tr>
+<% end %>
+<tr>
+<td>
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
+</td>
+</tr>
+</table>

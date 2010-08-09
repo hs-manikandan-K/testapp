@@ -1,0 +1,27 @@
+<h1>Listing task_lists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+                <th>
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+  </tr>
+
+<% @task_lists.each do |task_list| %>
+  <tr>
+    <td><%=h task_list.name %></td>
+    <td><%=h task_list.user_id %></td>
+    <td><%= link_to 'Show all Tasks', task_list_tasks_path(task_list) %></td>
+    <td><%#= link_to 'Edit', edit_user_task_list_path(@user,task_list) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New task_list', new_task_list_path %>

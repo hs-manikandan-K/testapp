@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  task_list_id: 1
+  title: MyString
+  description: MyString
+  due_date: 2010-08-08 13:13:32
+  status: false
+
+two:
+  task_list_id: 1
+  title: MyString
+  description: MyString
+  due_date: 2010-08-08 13:13:32
+  status: false

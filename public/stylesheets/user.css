@@ -1,0 +1,53 @@
+/* Common Element Style */
+html, body { margin:0; padding:0; height:100%;}
+body {font-family:Verdana;font-size:62.5%;}
+ul, ol, li, h1, h2, h3, h4, h5, h6, form, p {margin:0px;padding:0px;}
+h1{color:#FF0000;font-size:14px;font-weight:bold;margin:0;padding:13px 0 0 12px;text-align:center;}
+a {text-decoration:none;}
+img {border:0px;}
+
+/* Common Style */
+input,textarea,select{border:1px solid #92B2D6;font-size:11px;}
+label{font-size:1em;}
+.clearance{clear: both;}
+.flash_notice { text-align:center;font-size:1.2em;font-weight:bold; color:#FF0000;}
+.left_label{float:left;padding:0px;}
+.right_label{float:right;/*margin:0px;*/}
+.textBoxWidth{width:296px;} 
+.image_border{border:1px solid black;}
+.textBoxWidth_search{width:382px;} 
+.textBoxWidth_question{width:50px;}
+.text_style{width:152px;}
+.img_width{width:185px;}
+.text_style_search{width:85px;}
+.common_bold_font{font-size:1.6em;letter-spacing:2px;margin:11px 0px 4px;color:#656565;/*font-weight:normal;*/font-weight:bold;} 
+.phone_code_field {width: 95px;margin-right: 5px;}.phone_number_field {width: 185px;} 
+.text_right{text-align: right;}
+.adminButton, .adminLinkButton{ border:none;padding:3px 0px 4px; /*float:right;*/display:inline;}
+.adminButton input}
+
+
+#Wrapper {min-height:92%;height:auto !important;height:92%;/*position:absolute;*/width:960px;padding:0px 9px;margin:0px auto;} 
+	#wrapperHeader {}
+	#wrapperBody {clear:both;padding:10px;}
+.banner {
+background:#EDF3FE none repeat scroll 0 0;
+border-bottom:1px solid #CCCCCC;
+padding:1em 2em 0.5em;
+}
+           #wrapperFooter {bottom:0em;height:13px;margin:10px auto;width:960px;clear:both;}
+   
+.login_heading { text-align:center}
+.login_form {margin:10% auto;padding:10px 10px 60px; width:330px;}
+.login_form td {font-size:1.2em;font-weight:bold;}
+.login_field{width:200px;font-size:1.2em;}
+.forgot_password{font-size:1.2em;font-weight:bold;}
+
+	.list {text-align:left;}
+		.list thead th, .list tfoot td {background: #C7C7C7;  padding:2px 7px;height:30px;}
+		 .list tfoot td{padding:2px 7px;}
+                .list tbody td { border-bottom:1px solid #C7C7C7; padding:2px 7px; }
+		.list tfoot  td {width:100%;}
+		.list tfoot  td div {}
+                 .list_table a {color: #003366;font-size: 1em;text-decoration: none;} 
+		    .list_table a:hover {color:#FF9900;}	

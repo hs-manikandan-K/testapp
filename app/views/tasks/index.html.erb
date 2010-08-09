@@ -1,0 +1,39 @@
+
+
+<h1>Listing tasks</h1>
+
+<table class="list" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <thead>
+	    <tr class="titlename">
+		    <th>Task list</th>
+		    <th>Title</th>
+		    <th>Description</th>
+		    <th>Due date</th>
+		    <th>Status</th>
+		                <th>
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+	    </tr>
+    </thead>
+<% @tasks.each do |task| %>
+<%@task_list = task.task_list%>
+<%if @task_list%>
+  <tr>
+    <td><%=h @task_list.name %></td>
+    <td><%=h task.title %></td>
+    <td><%=h task.description %></td>
+    <td><%=h task.due_date %></td>
+    <td><%=h task.status ? "Done" : "Pending" %></td>
+    <td><%= link_to 'Show', task_list_task_path(@task_list,task) %></td>
+    <td><%= link_to 'Edit', edit_task_list_task_path(@task_list,task) %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New task', new_task_list_task_path(@task_list) %>
